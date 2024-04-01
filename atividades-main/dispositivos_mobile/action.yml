@@ -1,0 +1,24 @@
+name: Configuração do Projeto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v2 
+
+    - name: Configurar Projeto
+      run: |
+        
+        echo "Configurando o projeto..."
+        
+        echo "Configuração concluída com sucesso!"
+
+    - name: Enviar mensagem de sucesso
+      run: echo "Configuração do projeto foi feita com sucesso!"
